@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+    <html>
+
+        <head>
+
+            <meta charset="utf-8">
+
+            <title>Prueba del uso del Switch de JS en un documento HTML</title>
+
+            <script>
+
+                var cajon = prompt("Elige el cajón que quieres abrir (1-4)");
+                var event = new Event('build')
+                
+    
+                
+                
+                    
+            
+                
+
+            </script>
+
+        </head>
+
+        <body>
+
+            <script>
+                
+                switch (cajon) {
+
+                    case '1':
+
+                    alert("Hay un botón");
+
+                    var btn = document.createElement("BUTTON");
+                    document.body.appendChild(btn);
+                    btn.innerHTML = "No Clickes"; 
+                    btn.addEventListener("click", noPinches)
+
+                    function noPinches(){
+
+                        alert("Te he dicho que no pinches aquí pendejo");
+                        btn.innerHTML = "No tientes más a la suerte chico"
+                        btn.removeEventListener("click", noPinches);
+
+                    }
+
+                    
+                    
+    
+                break;
+
+                case '2':
+
+                    alert("Vaya sorpresa! \n El cajón está hasta arriba de tus suspensos del curso!");
+
+                break;
+
+                case '3':
+
+                    alert("No no, \n Aquí tampoco está tu dignidad :(");
+
+                break;
+
+                case '4':
+
+                    alert("Aquí estaría tu vida social si pudieras tenerla y compaginarla con los estudios");
+
+                break;
+
+                }
+                
+            </script>
+
+                <div id="contenidos" style="width:150px; height:60px; border:thin solid silver" onmouseover="this.style.borderColor='black';" onmouseout="this.style.borderColor='silver';">
+                    
+                    Sección de contenidos...
+                    
+                </div>
+
+        </body>
+
+    </html>
